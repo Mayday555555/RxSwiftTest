@@ -15,13 +15,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelUserNameUnValid: UILabel!
     typealias JSON = Any
     var disposeBag = DisposeBag()
+    var count = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.testFunctionalCode()
-//        self.closureFun()
-//        self.testAnyObserver()
-//        self.testBinder()
-        self.testOperateCode()
+        //        self.testFunctionalCode()
+        //        self.closureFun()
+        //        self.testAnyObserver()
+        //        self.testBinder()
+        //        self.testOperateCode()
+        //        self.testRetry()
+        self.testRetryWhen()
+        
     }
     
     ///函数式编程
@@ -105,27 +109,27 @@ class ViewController: UIViewController {
     }
     
     func testAnyObserver() {
-//        URLSession.shared.rx.data(request: URLRequest(url: URL(string: "https://ppt.szwdcloud.com/?info=0&furl=http://szwd.oss-cn-qingdao.aliyuncs.com/files/f1f7e562bbb84730ad2fa6d6c48a2bff.pptx")!)).subscribe(onNext: { (data) in
-//            print("取得json\(data)")
-//        }, onError: { (error) in
-//            print("error\(error.localizedDescription)")
-//        }, onCompleted: {
-//            print("任务成功完成")
-//        }) {
-//            print("Dispose")
-//        }.disposed(by: disposeBag)
+        //        URLSession.shared.rx.data(request: URLRequest(url: URL(string: "https://ppt.szwdcloud.com/?info=0&furl=http://szwd.oss-cn-qingdao.aliyuncs.com/files/f1f7e562bbb84730ad2fa6d6c48a2bff.pptx")!)).subscribe(onNext: { (data) in
+        //            print("取得json\(data)")
+        //        }, onError: { (error) in
+        //            print("error\(error.localizedDescription)")
+        //        }, onCompleted: {
+        //            print("任务成功完成")
+        //        }) {
+        //            print("Dispose")
+        //        }.disposed(by: disposeBag)
         
-//        let observer: AnyObserver<Data> = AnyObserver {(event) in
-//            switch event {
-//            case .next(let data):
-//                print("Data Task Success with count: \(data.count)")
-//            case .error(let error):
-//                print("Data Task Error: \(error)")
-//            case .completed:
-//                print("完成")
-//            }
-//        }
-//        URLSession.shared.rx.data(request: URLRequest(url: URL(string: "https://ppt.szwdcloud.com/?info=0&furl=http://szwd.oss-cn-qingdao.aliyuncs.com/files/f1f7e562bbb84730ad2fa6d6c48a2bff.pptx")!)).subscribe(observer).disposed(by: disposeBag)
+        //        let observer: AnyObserver<Data> = AnyObserver {(event) in
+        //            switch event {
+        //            case .next(let data):
+        //                print("Data Task Success with count: \(data.count)")
+        //            case .error(let error):
+        //                print("Data Task Error: \(error)")
+        //            case .completed:
+        //                print("完成")
+        //            }
+        //        }
+        //        URLSession.shared.rx.data(request: URLRequest(url: URL(string: "https://ppt.szwdcloud.com/?info=0&furl=http://szwd.oss-cn-qingdao.aliyuncs.com/files/f1f7e562bbb84730ad2fa6d6c48a2bff.pptx")!)).subscribe(observer).disposed(by: disposeBag)
         
     }
     
@@ -175,7 +179,110 @@ class ViewController: UIViewController {
                 task.cancel()
             }
         }
-//        json.sch
+        json.subscribeOn(ConcurrentDispatchQueueScheduler(qos: .userInitiated)).observeOn(MainScheduler.instance).subscribe(onNext: { (data) in
+            
+        }, onError: { (error) in
+            
+        }, onCompleted: {
+            
+        }) {
+            
+        }.disposed(by: disposeBag)
     }
+    
+    func testRetry() {
+        let json: Observable<JSON> = Observable.create { (obsever) -> Disposable in
+            let task = URLSession.shared.dataTask(with: URL(string: "http://ppt.szwdcloud.com/?info=0&furl=http://szwd.oss-cn-qingdao.aliyuncs.com/files/f1f7e562bbb84730ad2fa6d6c48a2bff.pptx")!) { (data, response, error) in
+                guard error == nil else {
+                    obsever.onError(error!)
+                    return
+                }
+                
+                guard let data = data, let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) else {
+                    obsever.onError(error!)
+                    return
+                }
+                
+                obsever.onNext(jsonObject)
+                obsever.onCompleted()
+            }
+            
+            task.resume()
+            return Disposables.create {
+                task.cancel()
+            }
+        }
+        json.retry(3).subscribe(onNext: { (data) in
+            
+        }, onError: { (error) in
+            print(error.localizedDescription)
+        }, onCompleted: {
+            
+        }) {
+            
+        }.disposed(by: disposeBag)
+    }
+    
+    func testRetryWhen() {
+        let json: Observable<JSON> = Observable.create { (obsever) -> Disposable in
+            let task = URLSession.shared.dataTask(with: URL(string: "http://ppt.szwdcloud.com/?info=0&furl=http://szwd.oss-cn-qingdao.aliyuncs.com/files/f1f7e562bbb84730ad2fa6d6c48a2bff.pptx")!) { (data, response, error) in
+                guard error == nil else {
+                    obsever.onError(error!)
+                    return
+                }
+                
+                guard let data = data, let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) else {
+                    obsever.onError(error!)
+                    return
+                }
+                
+                obsever.onNext(jsonObject)
+                obsever.onCompleted()
+            }
+            
+            task.resume()
+            return Disposables.create {
+                task.cancel()
+            }
+        }
+//        json.retryWhen({ (rxError) -> Observable<Int> in
+//            return Observable.timer(5, scheduler: MainScheduler.instance)
+//        }).subscribe(onNext: { (data) in
+//
+//        }, onError: { (error) in
+//            print(error.localizedDescription)
+//        }, onCompleted: {
+//
+//        }) {
+//
+//        }.disposed(by: disposeBag)
+        
+        json.retryWhen({ (rxError) -> Observable<Int> in
+            
+            //                   return Observable.timer(5, scheduler: MainScheduler.instance)
+            return rxError.flatMap { (error) -> Observable<Int> in
+                self.count += 1
+                guard self.count < 5 else {
+                    return Observable.error(error)
+                }
+                
+                return Observable<Int>.timer(5, scheduler: MainScheduler.instance)
+            }
+        }).subscribe(onNext: { (data) in
+            
+        }, onError: { (error) in
+            print(error.localizedDescription)
+        }, onCompleted: {
+            
+        }) {
+            
+        }.disposed(by: disposeBag)
+    }
+    
+    @IBAction func imagePickTap(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ImagePick") as? ImagePickViewController
+        self.present(vc!, animated: true, completion: nil)
+    }
+    
 }
 

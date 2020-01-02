@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,9 +26,17 @@
                                 <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rle-7V-GbF">
+                                <rect key="frame" x="171.5" y="407" width="71" height="30"/>
+                                <state key="normal" title="ImagePick"/>
+                                <connections>
+                                    <action selector="imagePickTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dob-W4-hbZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Rle-7V-GbF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4SB-ZR-Tzs"/>
                             <constraint firstItem="7Kh-PU-Yl8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9Vj-AQ-JSA"/>
                             <constraint firstItem="VdM-3g-KrY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="174" id="BjR-VH-bSC"/>
                             <constraint firstItem="VdM-3g-KrY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JlT-h7-SXr"/>
@@ -37,6 +45,7 @@
                             <constraint firstItem="7Kh-PU-Yl8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="heu-bV-oh5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VdM-3g-KrY" secondAttribute="trailing" constant="20" id="pdh-td-UtH"/>
                             <constraint firstItem="VdM-3g-KrY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tHz-RG-Bbl"/>
+                            <constraint firstItem="Rle-7V-GbF" firstAttribute="top" secondItem="7Kh-PU-Yl8" secondAttribute="bottom" constant="83" id="wNJ-cZ-qwa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -48,6 +57,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="88"/>
+        </scene>
+        <!--Image Pick View Controller-->
+        <scene sceneID="4UY-Dc-cyP">
+            <objects>
+                <viewController storyboardIdentifier="ImagePick" id="o78-NE-lls" customClass="ImagePickViewController" customModule="RxSwiftTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mz0-cC-ipC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dP-SZ-BPb">
+                                <rect key="frame" x="181.5" y="179" width="51" height="30"/>
+                                <state key="normal" title="camare"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkh-HH-nDQ">
+                                <rect key="frame" x="187" y="130" width="40" height="30"/>
+                                <state key="normal" title="photo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bzw-aN-4vP">
+                                <rect key="frame" x="192" y="234" width="30" height="30"/>
+                                <state key="normal" title="edit"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oS1-XI-j30">
+                                <rect key="frame" x="0.0" y="393" width="414" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="c1J-cX-i3E"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oS1-XI-j30" firstAttribute="leading" secondItem="0o7-Vj-REh" secondAttribute="leading" id="41F-aQ-qOv"/>
+                            <constraint firstItem="Bzw-aN-4vP" firstAttribute="top" secondItem="0dP-SZ-BPb" secondAttribute="bottom" constant="25" id="6bO-5l-ElO"/>
+                            <constraint firstItem="0dP-SZ-BPb" firstAttribute="centerX" secondItem="0o7-Vj-REh" secondAttribute="centerX" id="804-V5-Vmq"/>
+                            <constraint firstItem="Vkh-HH-nDQ" firstAttribute="centerX" secondItem="0o7-Vj-REh" secondAttribute="centerX" id="P6u-8Y-e0n"/>
+                            <constraint firstItem="0o7-Vj-REh" firstAttribute="trailing" secondItem="oS1-XI-j30" secondAttribute="trailing" id="V0r-KR-uhD"/>
+                            <constraint firstItem="Vkh-HH-nDQ" firstAttribute="top" secondItem="0o7-Vj-REh" secondAttribute="top" constant="86" id="XM4-qO-bJ3"/>
+                            <constraint firstItem="0dP-SZ-BPb" firstAttribute="top" secondItem="Vkh-HH-nDQ" secondAttribute="bottom" constant="19" id="a6H-GR-MCt"/>
+                            <constraint firstItem="Bzw-aN-4vP" firstAttribute="centerX" secondItem="0o7-Vj-REh" secondAttribute="centerX" id="fed-y7-4GU"/>
+                            <constraint firstItem="oS1-XI-j30" firstAttribute="top" secondItem="Bzw-aN-4vP" secondAttribute="bottom" constant="129" id="kL9-qb-VbR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0o7-Vj-REh"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnCamera" destination="0dP-SZ-BPb" id="JlU-Wn-R9O"/>
+                        <outlet property="btnEdit" destination="Bzw-aN-4vP" id="DWD-l6-Xhs"/>
+                        <outlet property="btnPhoto" destination="Vkh-HH-nDQ" id="AAm-yj-dOn"/>
+                        <outlet property="imageView" destination="oS1-XI-j30" id="W9H-jX-mbO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uAu-lz-Px6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061" y="95"/>
         </scene>
     </scenes>
 </document>
