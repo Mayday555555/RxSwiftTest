@@ -24,7 +24,8 @@ class ViewController: UIViewController {
         //        self.testBinder()
         //        self.testOperateCode()
         //        self.testRetry()
-        self.testRetryWhen()
+//        self.testRetryWhen()
+        self.testOperateCode()
         
     }
     
@@ -149,6 +150,90 @@ class ViewController: UIViewController {
         //filter
         Observable.of(1, 3, 20, 15, 30, 50).filter {$0 > 10}.subscribe(onNext: {print($0)}).disposed(by: disposeBag)
         Observable.of(1,2,3,4,5,6,7).map {$0 * 10}.subscribe(onNext: {print($0)}).disposed(by: disposeBag)
+        
+        let subject1 = PublishSubject<String>()
+        let subject2 = PublishSubject<Int>()
+        Observable.zip(subject1, subject2) { (str, intValue) -> String in
+            return "\(intValue)-\(str)"
+        }.subscribe { (str) in
+            print(str)
+        }.disposed(by: disposeBag)
+        
+        subject1.onNext("A")
+        subject2.onNext(1)
+        
+        subject1.onNext("B")
+        subject2.onNext(2)
+        
+        subject1.onNext("C")
+        subject2.onNext(3)
+        
+        subject1.onNext("D")
+        subject2.onNext(4)
+        
+        
+        
+        let json1: Observable<JSON> = Observable.create { (obsever) -> Disposable in
+            let task = URLSession.shared.dataTask(with: URL(string: "https://ppt.szwdcloud.com/?info=0&furl=http://szwd.oss-cn-qingdao.aliyuncs.com/files/f1f7e562bbb84730ad2fa6d6c48a2bff.pptx")!) { (data, response, error) in
+                guard error == nil else {
+                    obsever.onError(error!)
+                    return
+                }
+                
+                guard let data = data, let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) else {
+                    obsever.onError(error!)
+                    return
+                }
+                
+                obsever.onNext(jsonObject)
+                obsever.onCompleted()
+            }
+            
+            task.resume()
+            return Disposables.create {
+                task.cancel()
+            }
+        }
+        
+        let json2: Observable<JSON> = Observable.create { (obsever) -> Disposable in
+            let task = URLSession.shared.dataTask(with: URL(string: "https://ppt.szwdcloud.com/?info=0&furl=http://szwd.oss-cn-qingdao.aliyuncs.com/files/f1f7e562bbb84730ad2fa6d6c48a2bff.pptx")!) { (data, response, error) in
+                guard error == nil else {
+                    obsever.onError(error!)
+                    return
+                }
+                
+                guard let data = data, let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) else {
+                    obsever.onError(error!)
+                    return
+                }
+                
+                obsever.onNext(jsonObject)
+                obsever.onCompleted()
+            }
+            
+            task.resume()
+            return Disposables.create {
+                task.cancel()
+            }
+        }
+        
+        Observable.zip(json1, json2) { (object1, object2) -> (object1: Any, object2: Any) in
+            return (object1, object2)
+        }.subscribe { (object) in
+            print(object)
+        }.disposed(by: disposeBag)
+    }
+    
+    /// PublishSubject
+    func testPublishSubject() {
+        let subject = AsyncSubject<String>()
+        
+        subject.onNext("111")
+        subject.onNext("222")
+        
+        let sub1 = subject.subscribe(onNext: { (str) in
+            print("sub1: \(str)")
+        })
     }
     
     /// take until

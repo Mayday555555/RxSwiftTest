@@ -20,20 +20,20 @@ class ImagePickViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        btnPhoto.rx.tap
-        .flatMapLatest { [weak self] _ in
-            return UIImagePickerController.rx.createWithParent(self) { picker in
-                picker.sourceType = .camera
-                picker.allowsEditing = false
-            }
-            .flatMap { $0.rx.didFinishPickingMediaWithInfo }
-            .take(1)
-        }
-        .map { info in
-            return info[.originalImage] as? UIImage
-        }
-        .bind(to: imageView.rx.image)
-        .disposed(by: disposeBag)
+//        btnPhoto.rx.tap
+//        .flatMapLatest { [weak self] _ in
+//            return UIImagePickerController.rx.createWithParent(self) { picker in
+//                picker.sourceType = .camera
+//                picker.allowsEditing = false
+//            }
+//            .flatMap { $0.rx.didFinishPickingMediaWithInfo }
+//            .take(1)
+//        }
+//        .map { info in
+//            return info[.originalImage] as? UIImage
+//        }
+//        .bind(to: imageView.rx.image)
+//        .disposed(by: disposeBag)
     }
     
 
