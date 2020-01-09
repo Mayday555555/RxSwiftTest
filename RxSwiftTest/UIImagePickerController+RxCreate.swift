@@ -38,10 +38,14 @@ extension Reactive where Base: UIImagePickerController {
         return RxImagePickerDelegateProxy.proxy(for: base)
     }
     
-    public var didFinishPickingMediaWithInfo: Observable<[String: AnyObject]> {
-        return pickerDelegate.methodInvoked(#selector(UIImagePickerControllerDelegate.imagePickerController(_:didFinishPickingMediaWithInfo:))).map { (<#[Any]#>) -> Result in
-            return 
-        }
+//    public var didFinishPickingMediaWithInfo: Observable<[String: AnyObject]> {
+//        return pickerDelegate.methodInvoked(#selector(UIImagePickerControllerDelegate.imagePickerController(_:didFinishPickingMediaWithInfo:))).map { (<#[Any]#>) -> Result in
+//            return
+//        }
+//    }
+    
+    fileprivate func castOrThrow<T>(_ resultType: T.Type， _ object: Any) throws -> T{
+         
     }
     
 //    static func createWithParent(parent: UIViewController?, animated: Bool = true, configureImagePicker: @escaping (UIImagePickerController) throws -> Void = {x in}) -> Observable<UIImagePickerController> {
