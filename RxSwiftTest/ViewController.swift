@@ -36,9 +36,9 @@ class ViewController: UIViewController {
     }
     
     private func testRxData() {
-        let vcIds = ["ImagePick"]
+        let vcIds = ["ImagePick",  "CXZLabel"]
         tabView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        let items = Observable.just([SectionModel(model: "", items: [DataModel(name: "imagePicker")])])
+        let items = Observable.just([SectionModel(model: "", items: [DataModel(name: "imagePicker"), DataModel(name: "UILabel的使用")])])
         let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, DataModel>>(configureCell: {dataSource,tableView,indexPath,element -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             cell.textLabel?.text  = element.vcname
@@ -57,8 +57,8 @@ class ViewController: UIViewController {
     }
     
     private func presentVC(id: String) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: id) as? ImagePickViewController
-        self.present(vc!, animated: true, completion: nil)
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: id)
+        self.present(vc, animated: true, completion: nil)
     }
     
     ///函数式编程
