@@ -9,10 +9,15 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxDataSources
+
+//https://www.jianshu.com/p/a83eba5e7b8c
+//https://beeth0ven.github.io/RxSwift-Chinese-Documentation/content/rxswift_ecosystem.html
 class ViewController: UIViewController {
     
     @IBOutlet weak var textFieldUserName: UITextField!
     @IBOutlet weak var labelUserNameUnValid: UILabel!
+    @IBOutlet weak var tabView: UITableView!
     typealias JSON = Any
     var disposeBag = DisposeBag()
     var count = 0
@@ -24,9 +29,36 @@ class ViewController: UIViewController {
         //        self.testBinder()
         //        self.testOperateCode()
         //        self.testRetry()
-//        self.testRetryWhen()
-        self.testOperateCode()
+        //        self.testRetryWhen()
+        //        self.testOperateCode()
+        self.testRxData()
         
+    }
+    
+    private func testRxData() {
+        let vcIds = ["ImagePick"]
+        tabView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        let items = Observable.just([SectionModel(model: "", items: [DataModel(name: "imagePicker")])])
+        let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, DataModel>>(configureCell: {dataSource,tableView,indexPath,element -> UITableViewCell in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            cell.textLabel?.text  = element.vcname
+            return cell
+        })
+        items.bind(to: tabView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+        tabView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
+        tabView.tableFooterView = UIView()
+        tabView.rx.itemSelected.subscribe(onNext: { (index) in
+            self.tabView.deselectRow(at: index, animated: true)
+            self.presentVC(id: vcIds[index.row])
+        })
+            .disposed(by: disposeBag)
+    }
+    
+    private func presentVC(id: String) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: id) as? ImagePickViewController
+        self.present(vc!, animated: true, completion: nil)
     }
     
     ///函数式编程
@@ -333,17 +365,17 @@ class ViewController: UIViewController {
                 task.cancel()
             }
         }
-//        json.retryWhen({ (rxError) -> Observable<Int> in
-//            return Observable.timer(5, scheduler: MainScheduler.instance)
-//        }).subscribe(onNext: { (data) in
-//
-//        }, onError: { (error) in
-//            print(error.localizedDescription)
-//        }, onCompleted: {
-//
-//        }) {
-//
-//        }.disposed(by: disposeBag)
+        //        json.retryWhen({ (rxError) -> Observable<Int> in
+        //            return Observable.timer(5, scheduler: MainScheduler.instance)
+        //        }).subscribe(onNext: { (data) in
+        //
+        //        }, onError: { (error) in
+        //            print(error.localizedDescription)
+        //        }, onCompleted: {
+        //
+        //        }) {
+        //
+        //        }.disposed(by: disposeBag)
         
         json.retryWhen({ (rxError) -> Observable<Int> in
             
@@ -367,10 +399,13 @@ class ViewController: UIViewController {
         }.disposed(by: disposeBag)
     }
     
-    @IBAction func imagePickTap(_ sender: Any) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ImagePick") as? ImagePickViewController
-        self.present(vc!, animated: true, completion: nil)
-    }
+    
     
 }
 
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+}
