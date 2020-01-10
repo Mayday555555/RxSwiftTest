@@ -109,6 +109,7 @@ class ViewController: UIViewController {
         .disposed(by: disposeBag)
     }
     
+    //观察者
     func testAnyObserver() {
         //        URLSession.shared.rx.data(request: URLRequest(url: URL(string: "https://ppt.szwdcloud.com/?info=0&furl=http://szwd.oss-cn-qingdao.aliyuncs.com/files/f1f7e562bbb84730ad2fa6d6c48a2bff.pptx")!)).subscribe(onNext: { (data) in
         //            print("取得json\(data)")
@@ -133,6 +134,7 @@ class ViewController: UIViewController {
         //        URLSession.shared.rx.data(request: URLRequest(url: URL(string: "https://ppt.szwdcloud.com/?info=0&furl=http://szwd.oss-cn-qingdao.aliyuncs.com/files/f1f7e562bbb84730ad2fa6d6c48a2bff.pptx")!)).subscribe(observer).disposed(by: disposeBag)
         
     }
+    
     
     func testBinder() {
         let userNameValid = textFieldUserName.rx.text.map{$0?.count ?? 0 >= 5}.share(replay: 1)
@@ -242,6 +244,7 @@ class ViewController: UIViewController {
         _ = userNameValid.takeUntil(self.rx.deallocated).bind(to: labelUserNameUnValid.rx.isHidden)
     }
     
+    //调度器
     func testSchedulers() {
         let json: Observable<JSON> = Observable.create { (obsever) -> Disposable in
             let task = URLSession.shared.dataTask(with: URL(string: "http://ppt.szwdcloud.com/?info=0&furl=http://szwd.oss-cn-qingdao.aliyuncs.com/files/f1f7e562bbb84730ad2fa6d6c48a2bff.pptx")!) { (data, response, error) in
