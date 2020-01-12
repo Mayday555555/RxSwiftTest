@@ -36,9 +36,9 @@ class ViewController: UIViewController {
     }
     
     private func testRxData() {
-        let vcIds = ["ImagePick",  "CXZLabel"]
+        let vcIds = ["ImagePick",  "CXZLabel", "CXZButton"]
         tabView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        let items = Observable.just([SectionModel(model: "", items: [DataModel(name: "imagePicker"), DataModel(name: "UILabel的使用")])])
+        let items = Observable.just([SectionModel(model: "", items: [DataModel(name: "imagePicker"), DataModel(name: "UILabel的使用"), DataModel(name: "UIButton和UISwitch的使用")])])
         let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, DataModel>>(configureCell: {dataSource,tableView,indexPath,element -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             cell.textLabel?.text  = element.vcname

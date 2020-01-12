@@ -147,13 +147,79 @@
                     <view key="view" contentMode="scaleToFill" id="b7z-eS-D1G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5e1-CU-FeN">
+                                <rect key="frame" x="180" y="94" width="54" height="34"/>
+                                <state key="normal" title="button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neV-7b-N60">
+                                <rect key="frame" x="111" y="228" width="30" height="30"/>
+                                <state key="normal" title="btn1">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bT-4q-tMS">
+                                <rect key="frame" x="191" y="228" width="32" height="30"/>
+                                <state key="normal" title="btn2">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pL9-dc-S5h">
+                                <rect key="frame" x="273" y="228" width="32" height="30"/>
+                                <state key="normal" title="btn3">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L7h-2e-2c3">
+                                <rect key="frame" x="182.5" y="335" width="51" height="31"/>
+                            </switch>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5e1-CU-FeN" firstAttribute="top" secondItem="dci-U4-ZaA" secondAttribute="top" constant="50" id="0p4-7U-wP7"/>
+                            <constraint firstItem="pL9-dc-S5h" firstAttribute="centerY" secondItem="7bT-4q-tMS" secondAttribute="centerY" id="2q3-PA-klA"/>
+                            <constraint firstItem="pL9-dc-S5h" firstAttribute="leading" secondItem="7bT-4q-tMS" secondAttribute="trailing" constant="50" id="401-er-fQv"/>
+                            <constraint firstItem="7bT-4q-tMS" firstAttribute="top" secondItem="5e1-CU-FeN" secondAttribute="bottom" constant="100" id="4OJ-M8-s6r"/>
+                            <constraint firstItem="7bT-4q-tMS" firstAttribute="centerX" secondItem="dci-U4-ZaA" secondAttribute="centerX" id="ETk-hi-0op"/>
+                            <constraint firstItem="7bT-4q-tMS" firstAttribute="leading" secondItem="neV-7b-N60" secondAttribute="trailing" constant="50" id="KSj-jQ-pLL"/>
+                            <constraint firstItem="neV-7b-N60" firstAttribute="centerY" secondItem="7bT-4q-tMS" secondAttribute="centerY" id="NK6-1P-Hit"/>
+                            <constraint firstItem="L7h-2e-2c3" firstAttribute="centerX" secondItem="dci-U4-ZaA" secondAttribute="centerX" id="YJb-sA-umh"/>
+                            <constraint firstItem="5e1-CU-FeN" firstAttribute="centerX" secondItem="dci-U4-ZaA" secondAttribute="centerX" id="rXP-rp-MLq"/>
+                            <constraint firstItem="L7h-2e-2c3" firstAttribute="top" secondItem="7bT-4q-tMS" secondAttribute="bottom" constant="77" id="tim-7F-DoY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dci-U4-ZaA"/>
                     </view>
+                    <connections>
+                        <outlet property="btn1" destination="neV-7b-N60" id="Gfx-jt-k96"/>
+                        <outlet property="btn2" destination="7bT-4q-tMS" id="Dkc-Hq-IEX"/>
+                        <outlet property="btn3" destination="pL9-dc-S5h" id="49b-0Q-rkp"/>
+                        <outlet property="button" destination="5e1-CU-FeN" id="jO1-6N-1jL"/>
+                        <outlet property="sw" destination="L7h-2e-2c3" id="xUy-U4-zYH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O3L-vi-Odg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="197" y="733"/>
+            <point key="canvasLocation" x="195.6521739130435" y="732.58928571428567"/>
         </scene>
         <!--Text Field View Controller-->
         <scene sceneID="pZ9-wX-Cj9">
