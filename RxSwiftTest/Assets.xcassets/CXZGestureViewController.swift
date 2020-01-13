@@ -14,7 +14,13 @@ class CXZGestureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let tap = UITapGestureRecognizer()
+        self.view.addGestureRecognizer(tap)
+        tap.rx.event.subscribe(onNext: { (gesture) in
+            let point = gesture.location(in: gesture.view)
+            print("点击了（x:\(point.x) y:\(point.y)）")
+        })
+        .disposed(by: disposeBag)
     }
     
 

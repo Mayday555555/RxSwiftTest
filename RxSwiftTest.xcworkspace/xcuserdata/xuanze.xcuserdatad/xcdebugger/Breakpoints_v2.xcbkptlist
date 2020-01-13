@@ -18,6 +18,38 @@
             endingLineNumber = "98"
             landmarkName = "createObervalList()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8E2A73AC-C4BE-431A-AB25-264C5F4D53D3 - d43533b7b45ce1fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RxSwiftTest.ViewController.createObervalList() -&gt; ()"
+                  moduleName = "RxSwiftTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  uuid = "8E2A73AC-C4BE-431A-AB25-264C5F4D53D3 - 2d2030ff4cb3ff5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.AnyObserver&lt;Swift.Int&gt;) -&gt; RxSwift.Disposable in RxSwiftTest.ViewController.createObervalList() -&gt; ()"
+                  moduleName = "RxSwiftTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -66,38 +98,6 @@
             endingLineNumber = "113"
             landmarkName = "closureFun()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8A02C87C-57F1-4D15-A9EB-BFBFA696C66C - 930b95e063738120"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RxSwiftTest.ViewController.closureFun() -&gt; ()"
-                  moduleName = "RxSwiftTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "92">
-               </Location>
-               <Location
-                  uuid = "8A02C87C-57F1-4D15-A9EB-BFBFA696C66C - b347d3afb6f0c678"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Any) -&gt; () in RxSwiftTest.ViewController.closureFun() -&gt; ()"
-                  moduleName = "RxSwiftTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -114,38 +114,6 @@
             endingLineNumber = "115"
             landmarkName = "closureFun()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "42F7E600-250F-4C34-A4CB-5A43A695AA42 - b347d3afb6f0c678"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Any) -&gt; () in RxSwiftTest.ViewController.closureFun() -&gt; ()"
-                  moduleName = "RxSwiftTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "102"
-                  endingLineNumber = "102"
-                  offsetFromSymbolStart = "394">
-               </Location>
-               <Location
-                  uuid = "42F7E600-250F-4C34-A4CB-5A43A695AA42 - cba23edc3f9df182"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #3 (Swift.Error) -&gt; () in RxSwiftTest.ViewController.closureFun() -&gt; ()"
-                  moduleName = "RxSwiftTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "103"
-                  endingLineNumber = "103"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -162,38 +130,6 @@
             endingLineNumber = "117"
             landmarkName = "closureFun()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "37262B00-5E4C-434F-BE42-BFF56815BDAC - cba23edc3f9df182"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #3 (Swift.Error) -&gt; () in RxSwiftTest.ViewController.closureFun() -&gt; ()"
-                  moduleName = "RxSwiftTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "719">
-               </Location>
-               <Location
-                  uuid = "37262B00-5E4C-434F-BE42-BFF56815BDAC - cf2087f674240343"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #4 () -&gt; () in RxSwiftTest.ViewController.closureFun() -&gt; ()"
-                  moduleName = "RxSwiftTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "105"
-                  endingLineNumber = "105"
-                  offsetFromSymbolStart = "8">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -210,38 +146,6 @@
             endingLineNumber = "119"
             landmarkName = "closureFun()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4903D259-3B47-4C5C-82E7-5CE87EE0E82E - cf2087f674240343"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #4 () -&gt; () in RxSwiftTest.ViewController.closureFun() -&gt; ()"
-                  moduleName = "RxSwiftTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
-                  offsetFromSymbolStart = "136">
-               </Location>
-               <Location
-                  uuid = "4903D259-3B47-4C5C-82E7-5CE87EE0E82E - 50d18034eeef3970"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #5 () -&gt; () in RxSwiftTest.ViewController.closureFun() -&gt; ()"
-                  moduleName = "RxSwiftTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "107"
-                  endingLineNumber = "107"
-                  offsetFromSymbolStart = "8">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -274,6 +178,38 @@
             endingLineNumber = "305"
             landmarkName = "testSchedulers()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "21B5BA55-5B05-4CD1-B7DD-CC3BC0DF9806 - f7eec70a71a71c52"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swift.Error) -&gt; () in RxSwiftTest.ViewController.testSchedulers() -&gt; ()"
+                  moduleName = "RxSwiftTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "306"
+                  endingLineNumber = "306"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "21B5BA55-5B05-4CD1-B7DD-CC3BC0DF9806 - 11db867b62ecaae3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; () in RxSwiftTest.ViewController.testSchedulers() -&gt; ()"
+                  moduleName = "RxSwiftTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "308"
+                  endingLineNumber = "308"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -290,6 +226,38 @@
             endingLineNumber = "307"
             landmarkName = "testSchedulers()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "54BAC35F-8D24-49D8-959D-89EEB71D2AD4 - 11db867b62ecaae3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; () in RxSwiftTest.ViewController.testSchedulers() -&gt; ()"
+                  moduleName = "RxSwiftTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "308"
+                  endingLineNumber = "308"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "54BAC35F-8D24-49D8-959D-89EEB71D2AD4 - 9e8db4de444e6be0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #5 () -&gt; () in RxSwiftTest.ViewController.testSchedulers() -&gt; ()"
+                  moduleName = "RxSwiftTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "310"
+                  endingLineNumber = "310"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -308,34 +276,34 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "5BB62E20-3470-45EC-9AF1-A8434DF83845 - 4bf44145c5707b07"
+                  uuid = "5BB62E20-3470-45EC-9AF1-A8434DF83845 - 25e974f33d01edf0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (RxSwift.AnyObserver&lt;Any&gt;) -&gt; RxSwift.Disposable in RxSwiftTest.ViewController.testRetry() -&gt; ()"
+                  symbolName = "RxSwiftTest.ViewController.testSchedulers() -&gt; ()"
                   moduleName = "RxSwiftTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "296"
-                  endingLineNumber = "296"
-                  offsetFromSymbolStart = "773">
+                  startingLineNumber = "310"
+                  endingLineNumber = "310"
+                  offsetFromSymbolStart = "831">
                </Location>
                <Location
-                  uuid = "5BB62E20-3470-45EC-9AF1-A8434DF83845 - 7856573f61f3be3a"
+                  uuid = "5BB62E20-3470-45EC-9AF1-A8434DF83845 - 9e8db4de444e6be0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in closure #1 (RxSwift.AnyObserver&lt;Any&gt;) -&gt; RxSwift.Disposable in RxSwiftTest.ViewController.testRetry() -&gt; ()"
+                  symbolName = "closure #5 () -&gt; () in RxSwiftTest.ViewController.testSchedulers() -&gt; ()"
                   moduleName = "RxSwiftTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "297"
-                  endingLineNumber = "297"
-                  offsetFromSymbolStart = "20">
+                  startingLineNumber = "310"
+                  endingLineNumber = "310"
+                  offsetFromSymbolStart = "4">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -354,6 +322,38 @@
             endingLineNumber = "303"
             landmarkName = "testSchedulers()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CFAB92E6-16B2-4029-AFAB-2D535AF5AC91 - d8f3d51a66900e08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Any) -&gt; () in RxSwiftTest.ViewController.testSchedulers() -&gt; ()"
+                  moduleName = "RxSwiftTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "304"
+                  endingLineNumber = "304"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "CFAB92E6-16B2-4029-AFAB-2D535AF5AC91 - f7eec70a71a71c52"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swift.Error) -&gt; () in RxSwiftTest.ViewController.testSchedulers() -&gt; ()"
+                  moduleName = "RxSwiftTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "306"
+                  endingLineNumber = "306"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -370,6 +370,38 @@
             endingLineNumber = "340"
             landmarkName = "testRetry()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D9ED2E55-C5CE-46E3-A0D5-AAE8884DD33B - 885bad28136bb662"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; () in RxSwiftTest.ViewController.testRetry() -&gt; ()"
+                  moduleName = "RxSwiftTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "341"
+                  endingLineNumber = "341"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "D9ED2E55-C5CE-46E3-A0D5-AAE8884DD33B - 620ea1d63749b56b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #5 () -&gt; () in RxSwiftTest.ViewController.testRetry() -&gt; ()"
+                  moduleName = "RxSwiftTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "343"
+                  endingLineNumber = "343"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -402,38 +434,6 @@
             endingLineNumber = "361"
             landmarkName = "testRetryWhen()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7F6D7E8E-2E91-4944-B88D-0B0D5A50E926 - eddf95a8b4028e26"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (RxSwift.Observable&lt;Swift.Error&gt;) -&gt; RxSwift.Observable&lt;Swift.Int&gt; in RxSwiftTest.ViewController.testRetryWhen() -&gt; ()"
-                  moduleName = "RxSwiftTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "348"
-                  endingLineNumber = "348"
-                  offsetFromSymbolStart = "37">
-               </Location>
-               <Location
-                  uuid = "7F6D7E8E-2E91-4944-B88D-0B0D5A50E926 - 521305b30376583d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Error) -&gt; RxSwift.Observable&lt;Swift.Int&gt; in closure #2 (RxSwift.Observable&lt;Swift.Error&gt;) -&gt; RxSwift.Observable&lt;Swift.Int&gt; in RxSwiftTest.ViewController.testRetryWhen() -&gt; ()"
-                  moduleName = "RxSwiftTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xuanze/MyCode/RxSwiftTest/RxSwiftTest/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "349"
-                  endingLineNumber = "349"
-                  offsetFromSymbolStart = "116">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -497,6 +497,22 @@
             startingLineNumber = "236"
             endingLineNumber = "236"
             landmarkName = "testOperateCode()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "213600D3-F003-4034-88F8-DF75621BED2C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxSwiftTest/CXZTextFieldViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
