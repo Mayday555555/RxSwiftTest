@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -415,8 +416,8 @@
                                 <rect key="frame" x="0.0" y="358" width="414" height="216"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXR-X7-Up7">
-                                <rect key="frame" x="184" y="594" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="191.5" y="594" width="31" height="30"/>
+                                <state key="normal" title="开始"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -452,9 +453,29 @@
                     <view key="view" contentMode="scaleToFill" id="PeI-Ks-oIP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uns-cc-j38">
+                                <rect key="frame" x="0.0" y="124" width="414" height="216"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuK-qS-Wtt">
+                                <rect key="frame" x="0.0" y="390" width="414" height="216"/>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AuK-qS-Wtt" firstAttribute="top" secondItem="Uns-cc-j38" secondAttribute="bottom" constant="50" id="12n-0X-MKo"/>
+                            <constraint firstItem="AuK-qS-Wtt" firstAttribute="trailing" secondItem="gLZ-On-I75" secondAttribute="trailing" id="FlF-9a-g71"/>
+                            <constraint firstItem="AuK-qS-Wtt" firstAttribute="leading" secondItem="gLZ-On-I75" secondAttribute="leading" id="Hev-2c-kMh"/>
+                            <constraint firstItem="gLZ-On-I75" firstAttribute="trailing" secondItem="Uns-cc-j38" secondAttribute="trailing" id="VYx-Yn-11l"/>
+                            <constraint firstItem="Uns-cc-j38" firstAttribute="top" secondItem="gLZ-On-I75" secondAttribute="top" constant="80" id="nLn-zw-ZPr"/>
+                            <constraint firstItem="Uns-cc-j38" firstAttribute="leading" secondItem="PeI-Ks-oIP" secondAttribute="leading" id="zCP-NG-u3E"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gLZ-On-I75"/>
                     </view>
+                    <connections>
+                        <outlet property="pickerview1" destination="Uns-cc-j38" id="RQe-j3-ye0"/>
+                        <outlet property="pickerview2" destination="AuK-qS-Wtt" id="r03-No-x4c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JYV-3s-hiZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -467,9 +488,40 @@
                     <view key="view" contentMode="scaleToFill" id="nGT-B1-j5O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YEU-2o-0cb">
+                                <rect key="frame" x="0.0" y="124" width="414" height="738"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f4w-xl-XiV">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="h4K-dJ-cw0">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Rwz-IK-jhr">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YEU-2o-0cb" firstAttribute="top" secondItem="itR-GB-uRb" secondAttribute="top" constant="80" id="9V5-FV-JzX"/>
+                            <constraint firstItem="itR-GB-uRb" firstAttribute="trailing" secondItem="YEU-2o-0cb" secondAttribute="trailing" id="BgA-vd-OVl"/>
+                            <constraint firstItem="YEU-2o-0cb" firstAttribute="leading" secondItem="itR-GB-uRb" secondAttribute="leading" id="Bit-oK-Snw"/>
+                            <constraint firstItem="itR-GB-uRb" firstAttribute="bottom" secondItem="YEU-2o-0cb" secondAttribute="bottom" id="XR8-nE-doz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="itR-GB-uRb"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="YEU-2o-0cb" id="u8X-ND-2fD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dlb-pQ-SjW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -57,6 +57,7 @@ class CXZButtonViewController: UIViewController {
         sw.rx.isOn.asObservable().subscribe(onNext: { (isOn) in
             self.btn2.isEnabled = isOn
         })
+        .disposed(by: disposeBag)
     }
     
     

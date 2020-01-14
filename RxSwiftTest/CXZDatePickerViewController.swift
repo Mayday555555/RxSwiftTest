@@ -41,6 +41,22 @@ class CXZDatePickerViewController: UIViewController {
         .disposed(by: disposeBag)
         
         
+        DispatchQueue.main.async {
+            self.timerPicker.rx.countDownDuration.bind(to: self.leftTime).disposed(by: self.disposeBag)
+            self.leftTime.bind(to: self.timerPicker.rx.countDownDuration).disposed(by: self.disposeBag)
+        }
+        
+        Observable.combineLatest(self.leftTime.asObservable(), self.countDownStopped.asObservable()) { (leftvalue, countDowStopValue) -> String in
+            if countDowStopValue {
+                return "开始"
+            } else {
+                return "倒计时开始 还有\(leftvalue)秒"
+            }
+        }.bind(to: startBtn.rx.title())
+        .disposed(by: disposeBag)
+        
+        countDownStopped.asDriver().drive(startBtn.rx.isEnabled).disposed(by: disposeBag)
+        countDownStopped.asDriver().drive(timerPicker.rx.isEnabled).disposed(by: disposeBag)
     }
     
     func startCountDown() {

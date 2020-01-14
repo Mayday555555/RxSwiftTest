@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A14FB2C23A867BB00E4DB3A /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A14FB2B23A867BB00E4DB3A /* Student.swift */; };
+		8A6BC56223CD550A008B9C75 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6BC56123CD550A008B9C75 /* Operators.swift */; };
 		8A7FF65D23BDD8F000399CAF /* ImagePickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7FF65C23BDD8F000399CAF /* ImagePickViewController.swift */; };
 		8A7FF65F23BDE96100399CAF /* UIImagePickerController+RxCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7FF65E23BDE96100399CAF /* UIImagePickerController+RxCreate.swift */; };
 		8A87F3F623A0E765005CDC14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A87F3F523A0E765005CDC14 /* AppDelegate.swift */; };
@@ -56,6 +57,7 @@
 		61205C3ED3FF14C5A5846B72 /* Pods-RxSwiftTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftTest.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftTest/Pods-RxSwiftTest.release.xcconfig"; sourceTree = "<group>"; };
 		7CC096A006F1268666152306 /* Pods-RxSwiftTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftTest.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftTest/Pods-RxSwiftTest.debug.xcconfig"; sourceTree = "<group>"; };
 		8A14FB2B23A867BB00E4DB3A /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		8A6BC56123CD550A008B9C75 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		8A7FF65C23BDD8F000399CAF /* ImagePickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickViewController.swift; sourceTree = "<group>"; };
 		8A7FF65E23BDE96100399CAF /* UIImagePickerController+RxCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImagePickerController+RxCreate.swift"; sourceTree = "<group>"; };
 		8A87F3F223A0E765005CDC14 /* RxSwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +172,7 @@
 				8A88CB2B23C8615900EC921B /* CXZOtherViewViewController.swift */,
 				8A88CB2D23C8618E00EC921B /* CXZGestureViewController.swift */,
 				8A88CB2F23C8619D00EC921B /* CXZDatePickerViewController.swift */,
+				8A6BC56123CD550A008B9C75 /* Operators.swift */,
 				8A88CB3123C861B500EC921B /* CXZPickerViewViewController.swift */,
 				8A88CB3323C861D000EC921B /* CXZCollectionViewController.swift */,
 				8A14FB2B23A867BB00E4DB3A /* Student.swift */,
@@ -409,6 +412,7 @@
 				8A88CB2E23C8618E00EC921B /* CXZGestureViewController.swift in Sources */,
 				8A88CB2C23C8615900EC921B /* CXZOtherViewViewController.swift in Sources */,
 				8A88CB3023C8619D00EC921B /* CXZDatePickerViewController.swift in Sources */,
+				8A6BC56223CD550A008B9C75 /* Operators.swift in Sources */,
 				8A88CB2823C8612600EC921B /* CXZTextFieldViewController.swift in Sources */,
 				8A88CB3223C861B500EC921B /* CXZPickerViewViewController.swift in Sources */,
 				8A88CB2A23C8613A00EC921B /* CXZTextViewViewController.swift in Sources */,
